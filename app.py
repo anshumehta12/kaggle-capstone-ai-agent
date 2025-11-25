@@ -9,11 +9,15 @@ load_dotenv()
 
 # --- 1. SETUP LOGGING ---
 LOG_FILE = "spaces_app.log"
+
+# Clear logs on restart so you see fresh output
+with open(LOG_FILE, "w") as f:
+    f.write("--- New Session Started ---\n")
+
 logger.add(LOG_FILE, rotation="1 MB", format="{time:HH:mm:ss} | {level} | {message}")
 
 # --- 2. IMPORT AGENT ---
 try:
-    # FIX: Import from project package
     from project.main_agent import MainAgent
     from project.config import Config
     
@@ -21,12 +25,8 @@ try:
     try:
         Config.validate()
         logger.info("Configuration validated successfully.")
-        
-        # Debug Print (Safe)
-        key_count = len(Config.GEMINI_API_KEYS)
         mode = "MOCK" if Config.MOCK_MODE else "LIVE"
-        print(f"--- SYSTEM STARTUP: {mode} MODE ({key_count} keys loaded) ---")
-
+        print(f"--- SYSTEM STARTUP: {mode} MODE ---")
     except Exception as e:
         logger.warning(f"Config validation failed: {e}")
 
@@ -51,9 +51,7 @@ def get_live_logs():
     return "Logs initializing..."
 
 def response_generator(message, history):
-    """
-    Generator function for ChatInterface.
-    """
+    """Generator function for ChatInterface."""
     if not message:
         return ""
         
@@ -68,7 +66,6 @@ def response_generator(message, history):
         action = result_dict.get('plan', {}).get('action')
         logger.info(f"Agent Action: {action}")
 
-        # Safety visual indicator
         if result_dict.get("safety_status") == "REJECTED":
              response_text = "🛡️ **Safety Alert:** " + response_text
              logger.warning("Safety guardrail triggered.")
@@ -96,9 +93,7 @@ with gr.Blocks(title="Mental Health Companion") as demo:
     with gr.Row():
         # Left Column: Chat Interface
         with gr.Column(scale=2):
-            chat_interface = gr.ChatInterface(
-                fn=response_generator,
-            )
+            chat_interface = gr.ChatInterface(fn=response_generator)
         
         # Right Column: Logs
         with gr.Column(scale=1):
@@ -110,26 +105,13 @@ with gr.Blocks(title="Mental Health Companion") as demo:
                     label="Agent Thought Process",
                     value="Waiting for logs..."
                 )
-                # Manual Refresh Button (Backup)
-                btn_refresh = gr.Button("Refresh Logs", size="sm")
     
-    # --- EVENT HANDLING ---
-    
-    # 1. Manual Refresh
-    btn_refresh.click(get_live_logs, None, logs_display)
-    
-    # 2. Auto Refresh (Using Timer component if available, otherwise safe fallback)
-    # This fixes the "every=1" crash.
-    try:
-        timer = gr.Timer(value=2)
-        timer.tick(get_live_logs, None, logs_display)
-    except AttributeError:
-        # Fallback for older Gradio versions without Timer
-        demo.load(get_live_logs, None, logs_display)
+    # Fix for Auto-Refresh: Use Timer component
+    timer = gr.Timer(value=2)
+    timer.tick(get_live_logs, None, logs_display)
 
 # --- 5. LAUNCH ---
 if __name__ == "__main__":
-    # Check environment
     is_spaces = "SPACE_ID" in os.environ
     
     if is_spaces:
