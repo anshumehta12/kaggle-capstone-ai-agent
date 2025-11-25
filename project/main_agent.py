@@ -1,7 +1,6 @@
 """
 Main Agent: Orchestrator for the multi-agent pipeline.
 """
-# FIX: Use absolute imports
 from project.agents.planner import Planner
 from project.agents.worker import Worker
 from project.agents.evaluator import Evaluator
@@ -18,7 +17,7 @@ class MainAgent:
         self.evaluator = Evaluator()
         self.memory = SessionMemory(max_history=8)
         
-        # Set mock mode from config or parameter
+        # Set mock mode
         self.mock_mode = mock_mode if mock_mode is not None else Config.MOCK_MODE
         self.planner.mock_mode = self.mock_mode
         self.worker.mock_mode = self.mock_mode
@@ -29,21 +28,22 @@ class MainAgent:
     def handle_message(self, user_input: str) -> Dict:
         """Process a single user message through the pipeline."""
         logger.log("System", "Processing new message", 
-                  data={"input_preview": user_input[:50] + "..."})
+                   data={"input_preview": user_input[:50] + "..."})
         
         try:
             # 1. Update Memory
             self.memory.add_message("user", user_input)
             history_str = self.memory.get_history_string()
             
-            # 2. Planner
+            # 2. Planner (Analyze Input)
             plan = self.planner.plan(user_input, history_str)
             
-            # 3. Worker
+            # 3. Worker (Execute Plan)
             worker_res = self.worker.work(plan)
             
-            # 4. Evaluator
-            eval_res = self.evaluator.evaluate(worker_res)
+            # 4. Evaluator (Check Output vs Input)
+            # CHANGE: Now passing user_input to evaluate()
+            eval_res = self.evaluator.evaluate(worker_res, user_input)
             
             final_response = eval_res.get("final_response")
             
@@ -75,10 +75,8 @@ class MainAgent:
             }
     
     def get_conversation_summary(self) -> str:
-        """Get summary of current conversation."""
         return self.memory.get_conversation_summary()
     
     def clear_memory(self):
-        """Clear conversation history."""
         self.memory.clear()
         logger.log("MainAgent", "Conversation memory cleared")

@@ -1,5 +1,5 @@
 google-genai
 python-dotenv
 requests
-gradio>=4.0.0
+gradio
 loguru
