@@ -2,3 +2,4 @@ __pycache__
 spaces_app.log
 venv
 directory_structure.json
+.env
