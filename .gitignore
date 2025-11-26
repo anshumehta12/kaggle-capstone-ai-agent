@@ -5,3 +5,4 @@ directory_structure.json
 .env
 sereneshield.log
 serenshield_app.log
+user_long_term_data.json
