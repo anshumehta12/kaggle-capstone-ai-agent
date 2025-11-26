@@ -3,7 +3,7 @@
 **Agents for Good Track – Kaggle × Google Agents Intensive 2025 Capstone**  
 **Ajmal U K** | November 2025
 
-[![Live Demo](https://img.shields.io/badge/🤗%20Live%20Live%20Demo%20on%20Hugging%20Face-4B0082?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/spaces/ajmaluk/SafeGuard-AI)
+[![Live Demo](https://img.shields.io/badge/🤗%20Live%20Live%20Demo%20on%20Hugging%20Face-4B0082?style=for-the-badge&logo=huggingface&logoColor=white)](https://huggingface.co/spaces/ajmal-uk/mental-health)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit-blue?style=for-the-badge)](https://ajmaluk.netlify.app)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/ajmal.uk)
 
@@ -129,7 +129,7 @@ sequenceDiagram
 
 ### Live Demo
 
-https://huggingface.co/spaces/ajmaluk/SafeGuard-AI
+https://huggingface.co/spaces/ajmal-uk/mental-health
 
 **Try these to see the magic:**
 - “I’m having a panic attack right now”
